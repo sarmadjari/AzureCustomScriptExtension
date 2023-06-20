@@ -1,3 +1,3 @@
 # Azure CustomScriptExtension
 
-Automate application instllation on Azure Windows VM.
+Automate application installation on Azure VMs.
