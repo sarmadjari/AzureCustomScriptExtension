@@ -1,0 +1,8 @@
+
+
+# This command to configure Custom Script Extension for Ubuntu VM on Azure then download the script and run, the script will download the defiend applications and install them.
+az vm extension set --resource-group {RESOURCE-GROUP-NAME} --vm-name {VM-NAME} --name customScript --publisher Microsoft.Azure.Extensions --protected-settings '{"fileUris": ["https://{STORAGE-ACCOUNT}.blob.core.windows.net/ubuntu/install.sh"],"commandToExecute": "./install.sh"}'
+
+
+# This command to Delete Custom Script Extension for Windows VM on Azure
+az vm extension delete -g {RESOURCE-GROUP-NAME} --vm-name {VM-NAME} --name customScript

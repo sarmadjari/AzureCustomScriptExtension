@@ -1,7 +1,7 @@
 
 
-# This command to configure Custom Script Extension for Windows VM on Azure then download the PowerShell script give it the right permision to run, the script will download the defiend applications and install the, the process will be logged in Windows Event under (Windows Logs/Applications/) source SoftwareInstallation
-az vm extension set --resource-group {RESOURCE-GROUP-NAME} --vm-name {VM-NAME} --name CustomScriptExtension --publisher Microsoft.Compute --settings '{"fileUris":["https://{STORAGE-ACCOUNT}.blob.core.windows.net/software/install.ps1"],"commandToExecute":"powershell -ExecutionPolicy Unrestricted -File install.ps1"}'
+# This command to configure Custom Script Extension for Windows VM on Azure then download the PowerShell script give it the right permision to run, the script will download the defiend applications and install them, the process will be logged in Windows Event under (Windows Logs/Applications/) source SoftwareInstallation
+az vm extension set --resource-group {RESOURCE-GROUP-NAME} --vm-name {VM-NAME} --name CustomScriptExtension --publisher Microsoft.Compute --settings '{"fileUris":["https://{STORAGE-ACCOUNT}.blob.core.windows.net/windows/install.ps1"],"commandToExecute":"powershell -ExecutionPolicy Unrestricted -File install.ps1"}'
 
 
 # This command to Delete Custom Script Extension for Windows VM on Azure
